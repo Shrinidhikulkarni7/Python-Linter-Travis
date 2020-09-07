@@ -6,16 +6,13 @@ install:
     
 matrix:
   include:
-    - python 3.8
-    install:
+  
+      env: test=test
+      install:
         - pip install -r requirements.txt
-    scripts:
-   
+      scripts:
         - pytest --pylint
-    env: test=test
+        
+   
+     
     
-        # Build and test new
-    - python 3.8
-    env: VARIA=true
-    script:
-        - print ("Hello")
